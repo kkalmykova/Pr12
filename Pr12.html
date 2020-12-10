@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Somebodies in the list</title>
+       
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    </head>
+        <style>
+            table {
+                width: 100%; 
+                background: white; 
+                color: black; 
+                border-spacing: 0px; 
+                border: none;
+                border-collapse: inherit;
+            
+             }
+            th {
+                background: darkgray; 
+                color: white;
+                padding: 5px; 
+                text-align: center;
+                vertical-align: middle;
+                padding-bottom: 5px;
+                padding-top: 5px;
+                border: solid 0.5px #000;
+                border-top: none;
+                border-left: none;
+                height: 2.5em;
+            }
+            th[rowspan]{
+                height: 5em; 
+            }
+            td {
+                /*background: lightgrey;*/ 
+                padding: 2px; 
+                text-align: center; 
+                vertical-align:middle; 
+                padding-bottom: 2px;
+                padding-top: 2px;
+                color: black;
+                border: solid 0.5px #000;
+                border-top: none;
+                border-bottom: none;
+                border-left: none;
+                
+            }
+            
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            th {
+                position: -webkit-sticky;
+                position: sticky;
+                top: 0;
+                z-index: 2;
+            }
+            th[scope=col] {
+                position: -webkit-sticky;
+                position: sticky;
+                top:2.5em;
+            }    
+            th[scope=row] {
+                position: -webkit-sticky;
+                position: sticky;
+                left: 0;
+                z-index: 1;
+            }
+            th:not([scope=row]):first-child {
+                left: 0;
+                z-index: 3;
+            }
+            div[role="scrolltable"] {
+                 overflow: auto;
+                 max-height: 400px;
+                 border: 0.1px solid #000;
+                 outline: 0.1px solid #000;
+            }
+            .container {
+                width: 70%;
+            }   
+        </style>
+    <body>
+        <script src ="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        <div class= "container" role="scrolltable">
+            <table id="table" class = "rowheaders striped">
+                <thead>
+                    <tr scope="header">
+                        <th rowspan="2" >Name</th>  
+                        <th rowspan="2">Phone</th>
+                        <th rowspan="2"`>Email</th>
+                        <th rowspan="2">Website</th>
+                        <th colspan="5">Address</th>
+                        <th colspan="3">Company</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">City</th>
+                        <th scope="col">Geo tag</th>
+                        <th scope="col">Street</th>
+                        <th scope="col">Suite</th>
+                        <th scope="col">Zipcode</th>
+                        <th scope="col">Name</th><!-- comment -->
+                        <th scope="col">CatchPhrase</th>
+                        <th scope="col">Bs</th>
+                    </tr>  
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>    
+        <script src="Pr12.js"></script>    
+    </body>
+</html>
+
